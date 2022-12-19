@@ -1,7 +1,7 @@
 import * as React from "react";
 //import ProgressBar from "../components/ProgressBar";
 //import { Button } from "bootstrap";
-import "./FirstPage.css";
+import "../css/FirstPage.css";
 
 const FirstPage = () => {
   //const navigate = useNavigate();

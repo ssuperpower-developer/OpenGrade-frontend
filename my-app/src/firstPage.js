@@ -7,11 +7,11 @@ import "./FirstPage.css";
 
 
 const FirstPage = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
-  const navigateToLogin = () => {
-    navigate("login");  
-  };
+  //const navigateToLogin = () => {
+  //  navigate("login");  
+  //};
 
   //const navigate = useNavigate();
 
@@ -24,8 +24,6 @@ const FirstPage = () => {
       <img src="img/first.png" alt="first pic."></img></div>
       <div className="login_right">
         <img className="logo" src="img/ssu-logo.png" alt="logo pic."></img>
-        <button onClick={navigateToLogin}>로그인</button>
-
         <div className="firstComment">
           숭실대학교 유세인트의 아이디, 비빌번호를 입력해주시면 됩니다.
         </div>

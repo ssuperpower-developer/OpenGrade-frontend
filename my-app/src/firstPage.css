@@ -1,0 +1,85 @@
+.main {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+
+    background: #FFFFFE;
+
+}
+.login_right {
+    float: left;
+    width: 40%;
+    height: 100vh;
+    min-height: 800px;
+    padding-right: 70px;
+    padding-left: 20px;
+    background: #fff;
+    transition: all 0.5s ease;
+}
+  
+  .imgContainer > Img {
+    position: absolute;
+    width: 100%;
+    /* height: 100%; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+.login_left{
+    float: left;
+    width: 60%;
+    height: 100vh;
+    min-height: 800px;
+    padding-left: 70px;
+    padding-right: 20px;
+    background-image: url(../public/img/first.png);
+    background-position: left top,center bottom;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+}
+
+.logo {
+    width: 322px;
+    height: 79px;
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.loginBtn {
+    position: absolute;
+    width: 620px;
+    height: 140px;
+    left: 1252px;
+    top: 259px;
+
+    background: #4499C6;
+    border-radius: 10px;
+}
+
+.firstComment {
+    position: absolute;
+    width: 620px;
+    height: 140px;
+    left: 1252px;
+    top: 419px;
+
+    background: #E6F2F2;
+    border-radius: 10px;
+    float: left;
+}
+
+.secondComment {
+    position: absolute;
+    width: 620px;
+    height: 420px;
+    left: 1253px;
+    top: 599px;
+
+    background: #F4F9FA;
+    border-radius: 10px;
+}

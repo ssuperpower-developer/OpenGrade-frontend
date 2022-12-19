@@ -1,0 +1,18 @@
+.login{
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+
+  background: #FFFFFE;
+}
+
+.blank{
+  position: absolute;
+  width: 500px;
+  height: 80px;
+  left: 710px;
+  top: 314px;
+
+  background: #E6F2F2;
+  border-radius: 10px;
+}

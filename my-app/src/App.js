@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "../css/App.css";
-import FirstPage from "./FirstPage.js";
+import "./css/App.css";
+import FirstPage from "./js/FirstPage.js";
 
 //Class 형태로 만들어진 컴포넌트는 꼭 render 함수 있어야하며 render 함수 내부에서 JSX 코드를 return 해주어야함.
 class App extends Component {

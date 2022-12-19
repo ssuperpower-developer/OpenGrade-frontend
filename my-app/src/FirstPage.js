@@ -1,16 +1,13 @@
 import * as React from "react";
 //import ProgressBar from "../components/ProgressBar";
-import { Navigate, useNavigate, Link } from "react-router-dom";
-import LoginPage from "./LoginPage";
 //import { Button } from "bootstrap";
 import "./FirstPage.css";
-
 
 const FirstPage = () => {
   //const navigate = useNavigate();
 
   //const navigateToLogin = () => {
-  //  navigate("login");  
+  //  navigate("login");
   //};
 
   //const navigate = useNavigate();
@@ -21,7 +18,8 @@ const FirstPage = () => {
     <div className="main">
       <br />
       <div className="login_left">
-      <img src="img/first.png" alt="first pic."></img></div>
+        <img src="img/first.png" alt="first pic."></img>
+      </div>
       <div className="login_right">
         <img className="logo" src="img/ssu-logo.png" alt="logo pic."></img>
         <div className="firstComment">

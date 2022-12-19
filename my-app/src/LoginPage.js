@@ -1,8 +1,5 @@
-import React, { useState, useEffect }  from "react";
-import axios from 'axios';
-
 function LoginPage() {
-    /*
+  /*
     const [inputId, setInputId] = useState('')
     const [inputPw, setInputPw] = useState('')
  
@@ -29,12 +26,11 @@ function LoginPage() {
     // 페이지 호출 후 처음 한번만 호출될 수 있도록 [] 추가
     [])
  */
-    return(
-        <div>
-            <h2>Login</h2>
-        </div>
-    )
+  return (
+    <div>
+      <h2>Login</h2>
+    </div>
+  );
 }
- 
 
 export default LoginPage;

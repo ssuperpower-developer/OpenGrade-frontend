@@ -2,24 +2,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 50px;
+    margin: 60px;
 }
 
 .login_left {
     width: 1000px;
     height: 600px;
-    border: 1px solid red;
     float: left;
     display: flex;
     margin-left: auto;
+    margin-right: auto;
 }
 
 
 .login_right {
     width: 400px;
     height: 600px;
-    border: 1px solid green;
     float: left;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -32,28 +32,31 @@
     margin-top: 50px;
     margin-bottom: 30px;
 }
-button {
-    background-color: #4499c6;
+
+.btn {
+
+    background: #4499C6;
+
     width: 320px;
     height: 70px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 0px;
-    color: white;
 
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 36px;
     text-align: center;
-    align-items: center;
-}
-.btn{
+
+    color: white;
     margin-bottom: 10px;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+}
 
+.btn:hover {
+    cursor: pointer;
 }
 
 .firstComment {
@@ -62,7 +65,7 @@ button {
     height: 70px;
     border-radius: 5px;
     border-width: 0px;
-    
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -82,14 +85,15 @@ button {
     border-radius: 5px;
     border-width: 0px;
 
+    line-height: 60%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 36px;
-    text-align: center;
+    text-align: left;
 
-    color: #000000;    
+    color: #000000;
     margin-bottom: 10px;
     margin-top: 20px;
     margin-left: auto;
@@ -98,11 +102,11 @@ button {
 
 
 span {
-    font-style: italic;
+    font-weight: bold;
 }
 
-.lock{
+.lock {
     width: 20px;
-    margin-top: 10px;
-    margin-right:10px;
+    margin-top: 20px;
+    margin-right: 10px;
 }

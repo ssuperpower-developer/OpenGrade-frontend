@@ -1,18 +1,17 @@
 import * as React from "react";
 //import ProgressBar from "../components/ProgressBar";
 //import { Button } from "bootstrap";
+import { useNavigate } from "react-router-dom";
 import "../css/FirstPage.css";
 
 const FirstPage = () => {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  //const navigateToLogin = () => {
-  //  navigate("login");
-  //};
+  const navigateToLogin = () => {
+    navigate("login");
+  };
 
-  //const navigate = useNavigate();
-
-  // 버튼 클릭시 호출
+   //버튼 클릭시 호출
 
   return (
     <div id="main">
@@ -22,7 +21,7 @@ const FirstPage = () => {
       </div>
       <div className="login_right">
         <img className="logo" src="img/ssu-logo.png" alt="logo pic."></img>
-        <button className="goLogin">로그인</button>
+        <button onClick={navigateToLogin} className="goLogin">로그인</button>
         <div className="firstComment">
           숭실대학교 유세인트의 <br/>
           아이디, 비빌번호를 입력해주시면 됩니다.

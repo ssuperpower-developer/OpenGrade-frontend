@@ -1,0 +1,27 @@
+.btn {
+  background-color: #86c3e3;
+  width: 200px;
+  height: 70px;
+  border-radius: 20px;
+  border-width: 0px;
+  margin-right: 10px;
+  font-size: 23px;
+  color: white;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btnActive {
+  background-color: #4499c6;
+  width: 200px;
+  height: 70px;
+  border-radius: 20px;
+  border-width: 0px;
+  margin-right: 10px;
+  font-size: 23px;
+  color: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+  cursor: pointer;
+}

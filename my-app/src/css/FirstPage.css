@@ -1,0 +1,112 @@
+#main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px;
+}
+
+.login_left {
+    width: 1000px;
+    height: 600px;
+    float: left;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.login_right {
+    width: 400px;
+    height: 600px;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    display: flex;
+    width: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.btn {
+
+    background: #4499C6;
+
+    width: 320px;
+    height: 70px;
+    border-radius: 5px;
+    border-width: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 36px;
+    text-align: center;
+
+    color: white;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.firstComment {
+    background-color: #E6F2F2;
+    width: 320px;
+    height: 70px;
+    border-radius: 5px;
+    border-width: 0px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #000000;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.secondComment {
+    background-color: #F4F9FA;
+    width: 320px;
+    border-radius: 5px;
+    border-width: 0px;
+
+    line-height: 60%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 36px;
+    text-align: left;
+
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+span {
+    font-weight: bold;
+}
+
+.lock {
+    width: 20px;
+    margin-top: 20px;
+    margin-right: 10px;
+}

@@ -1,36 +1,69 @@
-function LoginPage() {
-  /*
-    const [inputId, setInputId] = useState('')
-    const [inputPw, setInputPw] = useState('')
- 
-	// input data 의 변화가 있을 때마다 value 값을 변경해서 useState 해준다
-    const handleInputId = (e) => {
-        setInputId(e.target.value)
+import "../css/LoginPage.css";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
+
+export default function LoginForm() {
+  const [changeId, setChangeId] = useState();
+  const [changePw, setChangePw] = useState();
+
+  const navigate = useNavigate();
+  const clickLogin = () => {
+    LoginCheck(changeId, changePw);
+  };
+
+  const LoginCheck = async (changeId, changePw) => {
+    try {
+      console.log("hi");
+      const api = axios.create({
+        baseURL: "http://34.64.123.6:8080",
+      });
+      console.log("hihi");
+      const result = await api.post("/login/request", {
+        id: changeId,
+        pw: changePw,
+      });
+      console.log(result.data);
+      if (result.data.token !== null) {
+        localStorage.setItem("wtw-token", result.data.token);
+        navigate("/login/mainPage");
+      } else if (result.data.stoken !== "") {
+        alert(
+          "융합특성화자유전공학부가 아닙니다. 이 사이트를 이용하실 수 없습니다."
+        );
+      } else {
+        alert("회원 정보가 올바르지 않습니다.");
+      }
+    } catch (e) {
+      alert("다시 입력해주세요.");
     }
- 
-    const handleInputPw = (e) => {
-        setInputPw(e.target.value)
-    }
- 
-	// login 버튼 클릭 이벤트
-    const onClickLogin = () => {
-        console.log('click login')
-    }
- 
-	// 페이지 렌더링 후 가장 처음 호출되는 함수
-    useEffect(() => {
-        axios.get('/user_inform/login')
-        .then(res => console.log(res))
-        .catch()
-    },
-    // 페이지 호출 후 처음 한번만 호출될 수 있도록 [] 추가
-    [])
- */
+  };
+
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="main">
+      <div id="login">
+        <div id="loginTitle">통합 LOGIN</div>
+        <div id="usaintID">
+          <div className="loginSubTitle">아이디</div>
+          <input
+            className="loginInput"
+            onChange={(e) => setChangeId(e.target.value)}
+          />
+        </div>
+        <div id="usaintPW">
+          <div className="loginSubTitle">비밀번호</div>
+          <input
+            className="loginInput"
+            type="password"
+            onChange={(e) => setChangePw(e.target.value)}
+          />
+        </div>
+        <button id="loginBtn" onClick={clickLogin}>
+          <img id="lock" src="img/lock.png" alt="lock pic." />
+          로그인
+        </button>
+      </div>
+      <img className="sidePng" src="img/side.png" alt="logo pic."></img>
     </div>
   );
 }
-
-export default LoginPage;

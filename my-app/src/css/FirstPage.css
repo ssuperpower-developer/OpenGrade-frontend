@@ -23,16 +23,46 @@
     margin-right: auto;
 }
 
-.firstComment {
-    background-color: #E6F2F2;
+.logo {
+    display: flex;
+    width: 200px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+button {
+    background-color: #4499c6;
     width: 320px;
     height: 70px;
     border-radius: 10px;
     border-width: 0px;
-    margin-right: 10px;
-    font-size: 23px;
     color: white;
 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: center;
+    align-items: center;
+}
+.btn{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.firstComment {
+    background-color: #E6F2F2;
+    width: 320px;
+    height: 70px;
+    border-radius: 5px;
+    border-width: 0px;
+    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -46,21 +76,11 @@
     margin-right: auto;
 }
 
-.logo {
-    display: flex;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
 .secondComment {
     background-color: #F4F9FA;
     width: 320px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 0px;
-    margin-right: 10px;
 
     font-family: 'Inter';
     font-style: normal;
@@ -71,32 +91,18 @@
 
     color: #000000;    
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-button {
-    background-color: #4499c6;
-    width: 320px;
-    height: 70px;
-    border-radius: 10px;
-    border-width: 0px;
-    color: white;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 36px;
-    text-align: center;
-
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 span {
     font-style: italic;
+}
+
+.lock{
+    width: 20px;
+    margin-top: 10px;
+    margin-right:10px;
 }

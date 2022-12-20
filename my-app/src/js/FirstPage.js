@@ -21,7 +21,7 @@ const FirstPage = () => {
       </div>
       <div className="login_right">
         <img className="logo" src="img/ssu-logo.png" alt="logo pic."></img>
-        <button onClick={navigateToLogin} className="goLogin">로그인</button>
+        <div className="btn"><button onClick={navigateToLogin} className="goLogin"><img src="img/lock.png" className="lock" alt="lock pic."/>  로그인</button></div>
         <div className="firstComment">
           숭실대학교 유세인트의 <br/>
           아이디, 비빌번호를 입력해주시면 됩니다.

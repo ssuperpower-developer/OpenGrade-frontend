@@ -1,16 +1,26 @@
 import "../css/MainPage.css";
 import MainBtn from "./MainBtn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ResponsiveScatterPlot } from "@nivo/scatterplot";
 
 export default function MainPage() {
-  //   const btnList = ["1", "2", "3", "4"];
   const [isPressBtn, setIsPressBtn] = useState([true, false, false, false]);
   const handlePressBtn = (index) => {
     const newBtnList = Array(4).fill(false);
     newBtnList[index] = true;
     setIsPressBtn(newBtnList);
   };
+
+  // const [nickName, setNickName] = useState();
+  // const handleNickName = () => {
+  //   setNickName(localStorage.getItem("nickName"));
+  // };
+
+  // useEffect(() => {
+  //   handleNickName();
+  // });
+
+  const nickName = localStorage.getItem("nickName");
 
   // 차트 데이터
   const data = [
@@ -41,7 +51,7 @@ export default function MainPage() {
   return (
     <div>
       <div id="title">
-        <span id="nickname">공허한 정약용</span>
+        <span id="nickname">{nickName}</span>
         <span id="titleText">님의 순위결과 조회입니다.</span>
       </div>
       <div id="main">
@@ -137,7 +147,7 @@ export default function MainPage() {
           </div>
           <div id="rankingTextBox">
             <span>
-              <span id="nicknameInBox">공허한 정약용</span>님의 순위는 전체
+              <span id="nicknameInBox">"{nickName}"</span>님의 순위는 전체
               융합특성화자유전공학부 150명 중 17등으로 예상됩니다.
             </span>
           </div>

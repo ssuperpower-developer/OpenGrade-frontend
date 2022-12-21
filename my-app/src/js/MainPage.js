@@ -4,7 +4,6 @@ import { useState } from "react";
 import { ResponsiveScatterPlot } from "@nivo/scatterplot";
 
 export default function MainPage() {
-  //   const btnList = ["1", "2", "3", "4"];
   const [isPressBtn, setIsPressBtn] = useState([true, false, false, false]);
   const handlePressBtn = (index) => {
     const newBtnList = Array(4).fill(false);
@@ -12,210 +11,38 @@ export default function MainPage() {
     setIsPressBtn(newBtnList);
   };
 
+  // const [nickName, setNickName] = useState();
+  // const handleNickName = () => {
+  //   setNickName(localStorage.getItem("nickName"));
+  // };
+
+  // useEffect(() => {
+  //   handleNickName();
+  // });
+
+  const nickName = localStorage.getItem("nickName");
+
   // 차트 데이터
   const data = [
     {
-      id: "바보들",
+      id: "전체성적",
       data: [
         {
           x: 68,
           y: 112,
         },
         {
+          x: 37,
+          y: 120,
+        },
+      ],
+    },
+    {
+      id: "내 성적",
+      data: [
+        {
           x: 95,
           y: 39,
-        },
-        {
-          x: 4,
-          y: 87,
-        },
-        {
-          x: 17,
-          y: 21,
-        },
-        {
-          x: 71,
-          y: 5,
-        },
-        {
-          x: 20,
-          y: 115,
-        },
-        {
-          x: 61,
-          y: 23,
-        },
-        {
-          x: 31,
-          y: 100,
-        },
-        {
-          x: 49,
-          y: 97,
-        },
-        {
-          x: 45,
-          y: 47,
-        },
-        {
-          x: 94,
-          y: 84,
-        },
-        {
-          x: 23,
-          y: 47,
-        },
-        {
-          x: 39,
-          y: 45,
-        },
-        {
-          x: 27,
-          y: 24,
-        },
-        {
-          x: 16,
-          y: 4,
-        },
-        {
-          x: 21,
-          y: 52,
-        },
-        {
-          x: 53,
-          y: 83,
-        },
-        {
-          x: 69,
-          y: 97,
-        },
-        {
-          x: 1,
-          y: 3,
-        },
-        {
-          x: 16,
-          y: 36,
-        },
-        {
-          x: 11,
-          y: 20,
-        },
-        {
-          x: 96,
-          y: 110,
-        },
-        {
-          x: 41,
-          y: 118,
-        },
-        {
-          x: 20,
-          y: 84,
-        },
-        {
-          x: 30,
-          y: 71,
-        },
-        {
-          x: 45,
-          y: 93,
-        },
-        {
-          x: 76,
-          y: 98,
-        },
-        {
-          x: 75,
-          y: 12,
-        },
-        {
-          x: 26,
-          y: 105,
-        },
-        {
-          x: 56,
-          y: 104,
-        },
-        {
-          x: 76,
-          y: 47,
-        },
-        {
-          x: 98,
-          y: 25,
-        },
-        {
-          x: 64,
-          y: 76,
-        },
-        {
-          x: 8,
-          y: 36,
-        },
-        {
-          x: 78,
-          y: 43,
-        },
-        {
-          x: 26,
-          y: 102,
-        },
-        {
-          x: 78,
-          y: 13,
-        },
-        {
-          x: 64,
-          y: 103,
-        },
-        {
-          x: 61,
-          y: 112,
-        },
-        {
-          x: 54,
-          y: 57,
-        },
-        {
-          x: 38,
-          y: 113,
-        },
-        {
-          x: 75,
-          y: 108,
-        },
-        {
-          x: 28,
-          y: 68,
-        },
-        {
-          x: 41,
-          y: 111,
-        },
-        {
-          x: 4,
-          y: 86,
-        },
-        {
-          x: 96,
-          y: 82,
-        },
-        {
-          x: 95,
-          y: 97,
-        },
-        {
-          x: 54,
-          y: 106,
-        },
-        {
-          x: 23,
-          y: 111,
-        },
-        {
-          x: 50,
-          y: 74,
         },
       ],
     },
@@ -224,7 +51,7 @@ export default function MainPage() {
   return (
     <div>
       <div id="title">
-        <span id="nickname">공허한 정약용</span>
+        <span id="nickname">{nickName}</span>
         <span id="titleText">님의 순위결과 조회입니다.</span>
       </div>
       <div id="main">
@@ -320,7 +147,7 @@ export default function MainPage() {
           </div>
           <div id="rankingTextBox">
             <span>
-              <span id="nicknameInBox">공허한 정약용</span>님의 순위는 전체
+              <span id="nicknameInBox">"{nickName}"</span>님의 순위는 전체
               융합특성화자유전공학부 150명 중 17등으로 예상됩니다.
             </span>
           </div>

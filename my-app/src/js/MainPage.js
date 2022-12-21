@@ -1,6 +1,6 @@
 import "../css/MainPage.css";
 import MainBtn from "./MainBtn";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ResponsiveScatterPlot } from "@nivo/scatterplot";
 
 export default function MainPage() {

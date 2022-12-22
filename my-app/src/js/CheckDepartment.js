@@ -1,14 +1,35 @@
 import "../css/CheckDepartment.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 export default function CheckDepartment() {
+  const departmentList = ["솦", "컴"];
   const [clickDepartment, setClickDepartment] = useState([false, false]);
+  const [department, setDepartment] = useState();
   const handleClickDepartment = (index) => {
     const newClickDepartment = Array(2).fill(false);
     newClickDepartment[index] = true;
+    setDepartment(departmentList[index]);
     setClickDepartment(newClickDepartment);
-  }
+  };
+
+  const checkDepartment = async () => {
+    try {
+      const api = axios.create({
+        baseURL: "http://34.64.123.6:8080",
+        headers: {
+          jwtToken: localStorage.getItem("wtw-token"),
+        },
+      });
+      await api.post("/login/apply", {
+        department: department,
+      });
+      navigate("/mainPage");
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const navigate = useNavigate();
 
@@ -16,7 +37,7 @@ export default function CheckDepartment() {
     if (JSON.stringify(clickDepartment) === JSON.stringify([false, false])) {
       alert("희망 전공을 선택하세요");
     } else {
-      navigate("/mainPage");
+      checkDepartment();
     }
   };
 

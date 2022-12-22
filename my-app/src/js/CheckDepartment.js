@@ -37,7 +37,6 @@ export default function CheckDepartment() {
     if (JSON.stringify(clickDepartment) === JSON.stringify([false, false])) {
       alert("희망 전공을 선택하세요");
     } else {
-      // navigate("/mainPage");
       checkDepartment();
     }
   };

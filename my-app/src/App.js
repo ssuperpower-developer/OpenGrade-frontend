@@ -16,8 +16,8 @@ class App extends Component {
         <Routes>
           <Route path="/" element={<FirstPage />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/CheckDepartment" element={<CheckDepartment />} />
           <Route path="/mainPage" element={<MainPage />} />
-          <Route path="/checkDepartment" element={<CheckDepartment />} />
         </Routes>
       </BrowserRouter>
     );

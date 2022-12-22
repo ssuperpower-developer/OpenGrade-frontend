@@ -68,6 +68,11 @@ export default function LoginForm() {
         </button>
       </div>
       <img className="sidePng" src="img/side.png" alt="logo pic."></img>
+      <div className="copy">
+        <span className="copyText">
+          &#9426; Soongsil Univ Student Kimdonghyun All Rights Reserved
+        </span>
+      </div>
     </div>
   );
 }

@@ -24,10 +24,14 @@ export default function LoginForm() {
         pw: changePw,
       });
       console.log(result.data);
-      if (result.data.token !== null) {
+      if (result.data.token) {
         localStorage.setItem("wtw-token", result.data.token);
-        navigate("/login/mainPage");
-      } else if (result.data.stoken !== "") {
+        localStorage.setItem("nickName", result.data.nickName);
+        navigate("/checkDepartment");
+      } else if (
+        result.data.loginValidate &&
+        result.data.department !== "융합특성화자유전공학부"
+      ) {
         alert(
           "융합특성화자유전공학부가 아닙니다. 이 사이트를 이용하실 수 없습니다."
         );

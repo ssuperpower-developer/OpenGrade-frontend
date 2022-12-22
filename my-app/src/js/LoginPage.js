@@ -26,7 +26,8 @@ export default function LoginForm() {
       console.log(result.data);
       if (result.data.token !== null) {
         localStorage.setItem("wtw-token", result.data.token);
-        navigate("/login/mainPage");
+        localStorage.setItem("nickName", result.data.nickName);
+        navigate("/CheckDepartment");
       } else if (result.data.stoken !== "") {
         alert(
           "융합특성화자유전공학부가 아닙니다. 이 사이트를 이용하실 수 없습니다."
@@ -64,6 +65,9 @@ export default function LoginForm() {
         </button>
       </div>
       <img className="sidePng" src="img/side.png" alt="logo pic."></img>
+      <div className="copy">
+        <span className="copyText" >&#9426; Soongsil Univ Student Kimdonghyun All Rights Reserved</span>
+      </div>
     </div>
   );
 }

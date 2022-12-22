@@ -68,3 +68,16 @@ html {
 #loginBtn:hover {
   cursor: pointer;
 }
+
+.copy{
+  position:absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.copyText{
+  margin: 10px;
+  color: #999;
+  font-size: 13px;
+}

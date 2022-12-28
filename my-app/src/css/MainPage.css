@@ -6,6 +6,8 @@ body {
 
 #title {
   margin: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 #nickname {
@@ -20,7 +22,7 @@ body {
 #main {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   /* margin: 50px; */
 }
 
@@ -28,6 +30,7 @@ body {
   margin: 30px;
   width: 90%;
   height: 600px;
+  font-size: 40px;
 }
 
 #left {

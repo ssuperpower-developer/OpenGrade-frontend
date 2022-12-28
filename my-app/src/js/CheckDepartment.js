@@ -1,10 +1,12 @@
 import "../css/CheckDepartment.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
+
 import axios from "axios";
 
 export default function CheckDepartment() {
-  const departmentList = ["솦", "컴"];
+  const departmentList = ["S", "C"];
   const [clickDepartment, setClickDepartment] = useState([false, false]);
   const [department, setDepartment] = useState();
   const handleClickDepartment = (index) => {
@@ -14,6 +16,8 @@ export default function CheckDepartment() {
     setClickDepartment(newClickDepartment);
   };
 
+  const [loading, setLoading] = useState(false);
+
   const checkDepartment = async () => {
     try {
       const api = axios.create({
@@ -22,21 +26,34 @@ export default function CheckDepartment() {
           jwtToken: localStorage.getItem("wtw-token"),
         },
       });
+      console.log("hi");
       await api.post("/login/apply", {
         department: department,
       });
-      navigate("/mainPage");
+      console.log("hihi");
+      await api
+        .post("/scrapping/request")
+        .then((res) => {
+          console.log(res);
+          setLoading(false);
+          navigate("/mainPage", { state: department });
+        })
+        .catch((e) => {
+          console.log(e);
+          setLoading(false);
+        });
+      console.log("hihihi");
     } catch (e) {
       console.log(e);
     }
   };
-
   const navigate = useNavigate();
 
   const handleClickCheckBtn = () => {
     if (JSON.stringify(clickDepartment) === JSON.stringify([false, false])) {
       alert("희망 전공을 선택하세요");
     } else {
+      setLoading(true);
       checkDepartment();
     }
   };
@@ -94,10 +111,21 @@ export default function CheckDepartment() {
             </svg>
           </button>
         </div>
-        <button id="checkBtn" onClick={handleClickCheckBtn}>
-          <img id="lock" src="img/lock.png" alt="lock pic." />
-          설정완료
-        </button>
+        {loading ? (
+          <div id="checkBtn">
+            <BeatLoader
+              color={"white"}
+              size={15}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+        ) : (
+          <button id="checkBtn" onClick={handleClickCheckBtn}>
+            <img id="lock" src="img/lock.png" alt="lock pic." />
+            설정완료
+          </button>
+        )}
       </div>
       <img className="sidePng" src="img/side.png" alt="logo pic."></img>
     </div>
